@@ -100,13 +100,6 @@ const LoginForm = ({ onLogin }: LoginFormProps) => {
               {isLoading ? "Signing in..." : "Sign In"}
             </Button>
           </form>
-          <div className="mt-6 text-sm text-gray-500 space-y-1">
-            <p><strong>Demo Credentials:</strong></p>
-            <p>Student: student@college.edu</p>
-            <p>Faculty: faculty@college.edu</p>
-            <p>Admin: admin@college.edu</p>
-            <p>Password: any password</p>
-          </div>
         </CardContent>
       </Card>
     </div>
