@@ -26,7 +26,7 @@ const DashboardRouter = ({ user, onLogout }: DashboardRouterProps) => {
   const renderDashboard = () => {
     switch (user.role) {
       case 'student':
-        return <StudentDashboard user={user} activeSection={activeSection} />;
+        return <StudentDashboard user={user} />;
       case 'faculty':
         return <FacultyDashboard user={user} activeSection={activeSection} />;
       case 'admin':
