@@ -6,7 +6,6 @@
   <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
   <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js" />
   <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
   <img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens" alt="JWT" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
@@ -303,10 +302,10 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📞 Support
 
-- **📧 Email**: harsha.developer@gmail.com
+- **📧 Email**: chekuriharshavardhan388@gmail.com
 - **💬 Discussions**: [GitHub Discussions](https://github.com/Harsha-o3/college-nexus-app/discussions)
 - **🐛 Issues**: [GitHub Issues](https://github.com/Harsha-o3/college-nexus-app/issues)
-- **💼 LinkedIn**: Connect for EdTech discussions and collaborations
+- **💼 LinkedIn**: Connect for EdTech discussions and collaborations (https://www.linkedin.com/in/chekuri-harsha-vardhan-90904b291).
 
 ---
 
