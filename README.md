@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to the College nexus app project
 
 ## Project info
 
