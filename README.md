@@ -43,34 +43,28 @@
 ## 🛠️ Tech Stack
 
 ### **Frontend**
-| Technology | Purpose |
-|------------|---------|
-| **React.js** | Web application development |
-| **React Native** | Mobile app development |
-| **TypeScript** | Type-safe JavaScript development |
-| **Tailwind CSS** | Utility-first CSS framework |
-| **Vite** | Fast development and build tool |
+| Technology | Purpose | Version |
+|------------|---------|---------|
+| **React.js** | Component-based UI framework | 18+ |
+| **TypeScript** | Type-safe JavaScript development | 5+ |
+| **Vite** | Lightning-fast build tool | 5+ |
+| **Tailwind CSS** | Utility-first CSS framework | 3+ |
+| **shadcn/ui** | Modern component library | Latest |
+| **Bun** | Ultra-fast JavaScript runtime | Latest |
 
-### **Backend**
-| Technology | Purpose |
-|------------|---------|
-| **Node.js** | Server-side JavaScript runtime |
-| **Express.js** | Web application framework |
-| **JWT** | Authentication and authorization |
-| **REST APIs** | Client-server communication |
+### **Development & Build Tools**
+| Technology | Purpose | Configuration |
+|------------|---------|---------------|
+| **ESLint** | Code linting & quality | `eslint.config.js` |
+| **PostCSS** | CSS processing | `postcss.config.js` |
+| **TypeScript** | Type checking | `tsconfig.*.json` |
+| **Vite** | Build optimization | `vite.config.ts` |
 
-### **Database**
-| Technology | Purpose |
-|------------|---------|
-| **MySQL** | Relational database for structured data |
-| **MongoDB** | NoSQL database for flexible data storage |
-
-### **Development Tools**
-| Technology | Purpose |
-|------------|---------|
-| **ESLint** | Code linting and quality assurance |
-| **Prettier** | Code formatting |
-| **Git** | Version control |
+### **Package Management**
+| Technology | Purpose | Lock File |
+|------------|---------|-----------|
+| **Bun** | Primary package manager | `bun.lockb` |
+| **npm** | Alternative package manager | `package-lock.json` |
 
 ---
 
@@ -78,121 +72,175 @@
 
 ### Prerequisites
 - **Node.js** (v18.0.0 or higher)
-- **npm** or **yarn** package manager
-- **MySQL** or **MongoDB** database
+- **Bun** (Latest version) or **npm/yarn**
 - **Git** for version control
 
-### Backend Setup
+### Installation & Setup
 
-1. **Navigate to backend directory**
+1. **Clone the repository**
    ```bash
-   cd backend
+   git clone https://github.com/Harsha-o3/college-nexus-app.git
+   cd college-nexus-app
    ```
 
 2. **Install dependencies**
    ```bash
+   # Using Bun (recommended for faster installation)
+   bun install
+   
+   # Or using npm
    npm install
    ```
 
-3. **Configure environment variables**
+3. **Start development server**
    ```bash
-   cp .env.example .env
-   # Update database credentials and JWT secret
-   ```
-
-4. **Start the server**
-   ```bash
+   # Using Bun
+   bun run dev
+   
+   # Or using npm
    npm run dev
    ```
 
-### Frontend Setup
-
-1. **Navigate to frontend directory**
-   ```bash
-   cd frontend
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Configure API endpoints**
-   ```bash
-   # Update API base URL in config files
-   ```
-
-4. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser**
+4. **Open your browser**
    ```
    http://localhost:5173
    ```
 
+### 🔧 **Development Workflow**
+
+```bash
+# Install new dependencies
+bun add <package-name>
+
+# Run linting
+bun run lint
+
+# Build for production
+bun run build
+
+# Preview production build
+bun run preview
+```
+
 ---
 
-## 📁 Project Structure
+## 📁 Project Architecture
 
 ```
 college-nexus-app/
-├── 📂 backend/                # Server-side application
-│   ├── 📂 controllers/        # Route controllers
-│   ├── 📂 models/            # Database models
-│   ├── 📂 routes/            # API routes
-│   ├── 📂 middleware/        # Authentication & validation
-│   ├── 📂 config/            # Database & app configuration
-│   └── 📄 server.js          # Main server file
-├── 📂 frontend/              # Client-side application
-│   ├── 📂 src/
-│   │   ├── 📂 components/    # Reusable UI components
-│   │   ├── 📂 pages/         # Application pages
-│   │   ├── 📂 hooks/         # Custom React hooks
-│   │   ├── 📂 services/      # API service functions
-│   │   ├── 📂 utils/         # Utility functions
-│   │   ├── 📂 types/         # TypeScript definitions
-│   │   └── 📄 main.tsx       # Application entry point
-│   ├── 📄 package.json       # Frontend dependencies
-│   └── 📄 vite.config.ts     # Vite configuration
-├── 📂 mobile/                # React Native app (if applicable)
-├── 📂 docs/                  # Documentation
-├── 📄 README.md              # Project documentation
-└── 📄 .env.example           # Environment variables template
+├── 📦 node_modules/           # Dependencies
+├── 📂 public/                 # Static assets & resources
+├── 📂 src/                    # Source code directory
+│   ├── 📂 components/         # Modular UI Components
+│   │   ├── 📂 admin/          # 👨‍💼 Admin dashboard components
+│   │   ├── 📂 auth/           # 🔐 Authentication components
+│   │   ├── 📂 dashboard/      # 📊 Dashboard layouts
+│   │   ├── 📂 faculty/        # 👨‍🏫 Faculty management
+│   │   ├── 📂 layout/         # 🎨 Layout components
+│   │   ├── 📂 student/        # 👨‍🎓 Student portal components
+│   │   └── 📂 ui/             # 🎯 Reusable UI elements
+│   ├── 📂 contexts/           # ⚡ React Context providers
+│   ├── 📂 hooks/              # 🪝 Custom React hooks
+│   ├── 📂 lib/                # 📚 Utility libraries
+│   ├── 📂 pages/              # 📄 Application pages/routes
+│   ├── 📄 App.css             # 🎨 Main application styles
+│   ├── 📄 App.tsx             # 🚀 Root application component
+│   ├── 📄 index.css           # 🎨 Global styles
+│   ├── 📄 main.tsx            # 🎯 Application entry point
+│   └── 📄 vite-env.d.ts       # 🔧 Vite environment types
+├── 📄 .gitignore              # 🚫 Git ignore rules
+├── 📄 bun.lockb               # 🔒 Bun package lock
+├── 📄 components.json         # 🧩 Component configuration
+├── 📄 eslint.config.js        # 📏 ESLint configuration
+├── 📄 index.html              # 🌐 HTML entry point
+├── 📄 package-lock.json       # 🔒 NPM dependency lock
+├── 📄 package.json            # 📦 Project dependencies
+├── 📄 postcss.config.js       # 🎨 PostCSS configuration
+├── 📄 README.md               # 📖 Project documentation
+├── 📄 tailwind.config.ts      # 🎨 Tailwind CSS configuration
+├── 📄 tsconfig.app.json       # ⚙️ TypeScript app config
+├── 📄 tsconfig.json           # ⚙️ TypeScript base config
+├── 📄 tsconfig.node.json      # ⚙️ TypeScript Node config
+└── 📄 vite.config.ts          # ⚡ Vite build configuration
+```
+
+### 🏗️ **Component Architecture**
+
+```
+src/components/
+├── 👨‍💼 admin/                  # Administrative Functions
+│   ├── UserManagement.tsx     # User CRUD operations
+│   ├── SystemSettings.tsx     # System configurations
+│   └── ReportsPanel.tsx       # Analytics & reports
+├── 🔐 auth/                   # Authentication System
+│   ├── LoginForm.tsx          # User login interface
+│   ├── RegisterForm.tsx       # User registration
+│   └── ProtectedRoute.tsx     # Route protection
+├── 📊 dashboard/              # Dashboard Layouts
+│   ├── StatCards.tsx          # Statistics display
+│   ├── Charts.tsx             # Data visualizations
+│   └── QuickActions.tsx       # Action shortcuts
+├── 👨‍🏫 faculty/               # Faculty Portal
+│   ├── CourseManagement.tsx   # Course administration
+│   ├── AttendanceTracker.tsx  # Attendance management
+│   └── GradeBook.tsx          # Grade management
+├── 🎨 layout/                 # Layout Components
+│   ├── Header.tsx             # Navigation header
+│   ├── Sidebar.tsx            # Navigation sidebar
+│   └── Footer.tsx             # Application footer
+├── 👨‍🎓 student/               # Student Portal
+│   ├── ProfileView.tsx        # Student profile
+│   ├── CoursesView.tsx        # Enrolled courses
+│   └── GradesView.tsx         # Academic performance
+└── 🎯 ui/                     # Reusable UI Elements
+    ├── Button.tsx             # Custom buttons
+    ├── Modal.tsx              # Modal dialogs
+    └── DataTable.tsx          # Data display tables
 ```
 
 ---
 
-## 🎨 Design System
+## 🎨 Design System & Architecture
 
-Our design system emphasizes:
+### **Component-Driven Development**
+- **🧩 Modular Components** - Organized by feature domains (admin, auth, faculty, student)
+- **🎯 Reusable UI Library** - Custom components built with shadcn/ui primitives
+- **🎨 Consistent Theming** - Tailwind CSS configuration for unified design language
+- **📱 Responsive Design** - Mobile-first approach with breakpoint optimization
 
-- **🎯 Accessibility First** - WCAG 2.1 AA compliant
-- **🎨 Consistent Theming** - Unified color palette and typography
-- **📱 Responsive Layouts** - Mobile, tablet, and desktop optimized
-- **⚡ Performance** - Optimized animations and interactions
+### **Code Organization Principles**
+- **🏗️ Feature-Based Structure** - Components grouped by functionality
+- **🔧 Separation of Concerns** - Clear distinction between UI, logic, and data
+- **⚡ Performance Optimization** - Code splitting and lazy loading strategies
+- **🔒 Type Safety** - Full TypeScript implementation across all components
+
+### **Development Experience**
+- **🚀 Hot Reload** - Instant feedback with Vite's HMR
+- **📏 Code Quality** - ESLint integration for consistent coding standards
+- **🎯 Fast Builds** - Optimized build process with Bun and Vite
+- **🔍 IntelliSense** - Full TypeScript support for better development experience
 
 ---
 
 ## 🔧 Available Scripts
 
-### Backend Scripts
 | Command | Description |
 |---------|-------------|
-| `npm start` | Start production server |
-| `npm run dev` | Start development server with nodemon |
-| `npm test` | Run backend tests |
-| `npm run lint` | Run ESLint on backend code |
+| `bun run dev` | 🚀 Start Vite development server |
+| `bun run build` | 🏗️ Build optimized production bundle |
+| `bun run preview` | 👀 Preview production build locally |
+| `bun run lint` | 📏 Run ESLint code quality checks |
+| `bun install` | 📦 Install all project dependencies |
+| `bun add <package>` | ➕ Add new dependency |
+| `bun remove <package>` | ➖ Remove dependency |
 
-### Frontend Scripts
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
-| `npm run type-check` | Run TypeScript compiler check |
+### 🎯 **Alternative with npm/yarn**
+```bash
+npm run dev     # Development server
+npm run build   # Production build  
+npm run preview # Preview build
+npm run lint    # Code linting
+```
 
 ---
 
