@@ -1,13 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from 'react';
+import { AuthProvider } from '@/contexts/AuthContext';
+import LoginForm from '@/components/auth/LoginForm';
+import DashboardRouter from '@/components/dashboard/DashboardRouter';
 
 const Index = () => {
+  const [user, setUser] = useState(null);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <AuthProvider>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        {!user ? (
+          <LoginForm onLogin={setUser} />
+        ) : (
+          <DashboardRouter user={user} onLogout={() => setUser(null)} />
+        )}
       </div>
-    </div>
+    </AuthProvider>
   );
 };
 
