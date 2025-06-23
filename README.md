@@ -321,6 +321,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <div align="center">
   <h3>⭐ If you found this project helpful, please give it a star!</h3>
+  https://college-nexus-app.vercel.app
   <p><em>Your support motivates continued development and improvement of College Nexus App.</em></p>
   
   <br>
